@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Arial, system-ui, Avenir, Helvetica, sans-serif;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #100f15;
+}
+
+input[type='range'] {
+    -webkit-appearance: none;
+    height: 7px;
+    width: 100%;
+    background: #17161e linear-gradient(#9ffba7, #9ffba7) no-repeat;
+}
+
+input[type='range']::-webkit-slider-thumb,
+input[type='range']::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #e6e5e9;
+    border: 1px solid #e6e5e9;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+input[type='range']:hover::-webkit-slider-thumb,
+input[type='range']:hover::-moz-range-thumb {
+    border: 1px solid #9ffba7;
+    background-color: #1b1323;
+}
+
+input[type='range']:active::-webkit-slider-thumb,
+input[type='range']:active::-moz-range-thumb {
+    border: 1px solid #9ffba7;
+    background-color: #1b1323;
+}
+
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-moz-range-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 1.5em;
+    border: 2px solid rgba(255, 255, 255, 0.87);
+    outline: none;
+    cursor: pointer;
+    transition: all .1s;
+}
+
+.checkbox-wrapper label {
+    cursor: pointer;
+}
+
+.checkbox-wrapper input[type="checkbox"]:hover {
+    border: #9ffba7 2px solid;
+}
+
+input.checked {
+    background-color: #9ffba7;
+    position: relative;
+    border: 2px solid #9ffba7 !important;
+}
+
+input.checked::before {
+    content: '\2713';
+    font-size: 1.1em;
+    color: #000;
+    position: absolute;
+    right: 1px;
+    top: -5px;
+}
+
+.checkbox-wrapper input[type="checkbox"]:disabled + span {
+    color: #c0c0c0;
+}
